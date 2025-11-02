@@ -1,0 +1,22 @@
+[
+  {
+    "id": "BKM1749340987433lg4",
+    "nombre": "Jhon Alexander Rodriguez Redondo",
+    "celular": "3222419645",
+    "correo": "jhonalex0225@gmail.com",
+    "tipoDoc": "CC",
+    "contrasena": "jhon1016",
+    "numDoc": "1016950908",
+    "fechaRegistro": "2025-06-08T00:03:07.447Z"
+  },
+  {
+    "id": "BKM1749835250476uio",
+    "nombre": "Solangie Garavito",
+    "celular": "3222419645",
+    "correo": "spgaravito@ucatolica.edu.co",
+    "tipoDoc": "CC",
+    "contrasena": "jhon1016",
+    "numDoc": "33333333",
+    "fechaRegistro": "2025-06-13T17:20:50.551Z"
+  }
+]

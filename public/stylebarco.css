@@ -1,0 +1,174 @@
+/* =======================
+     ESTILOS CSS FORMULARIO BKM
+     FECHA: 22-04-2025
+     PROGRAMADO POR: CMCB
+     =======================/*
+
+/* CMCB: Variables globales de colores para mantener consistencia visual */
+:root {
+  --naranja: #f57c00;
+  --azul: #0d47a1;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --gris-claro: #f5f5f5;
+}
+
+/* CMCB: Estilo base del body con fondo gris claro y fuente cursiva */
+body {
+  font-family: cursive;
+  margin: 0;
+  background: var(--gris-claro);
+  color: var(--negro);
+}
+
+/* CMCB: Header principal con fondo azul, color blanco y disposición horizontal */
+header {
+  background: var(--azul);
+  color: var(--blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+/* CMCB: Contenedor del logo alineado al centro */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* CMCB: Caja destacada del logo con fondo naranja y tipografía Handlee */
+.logo-box {
+  background: var(--naranja);
+  color: var(--blanco);
+  padding: 10px 15px;
+  font-weight: 700;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-family: "Handlee", cursive;
+}
+
+/* CMCB: Menú de navegación sin viñetas y con separación horizontal */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* CMCB: Estilo de los enlaces del menú */
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+/* CMCB: Efecto hover que cambia el color del texto a naranja */
+nav a:hover {
+  color: var(--naranja);
+}
+
+/* CMCB: Contenedor principal con padding y fondo blanco */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: #fff;
+}
+
+/* CMCB: Contenedor del formulario con bordes, sombra y estilo visual llamativo */
+.form-container {
+  background-color: #fff;
+  border: 3px solid #f77f00;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* CMCB: Título centrado con color azul oscuro */
+.form-container h2 {
+  color: #031d44;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* CMCB: Etiquetas del formulario con separación y peso visual */
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* CMCB: Estilos para inputs, email, fecha y select con bordes redondeados */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* CMCB: Etiquetas de opciones de funcionalidades */
+.funcionalidades label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* CMCB: Botón con fondo azul oscuro, borde redondeado y hover animado */
+button {
+  background-color: #031d44;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* CMCB: Cambio de color del botón al pasar el mouse */
+button:hover {
+  background-color: #f77f00;
+}
+
+/* CMCB: Footer con fondo azul oscuro, texto blanco y diseño responsive */
+footer {
+  background-color: #031d44;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* CMCB: Título de las secciones del footer con peso negrita */
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* CMCB: Listas en el footer sin viñetas */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* CMCB: Enlaces en el footer sin subrayado y con color blanco */
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* CMCB: Fuente cursiva para elementos de lista */
+li {
+  font-family: cursive;
+}

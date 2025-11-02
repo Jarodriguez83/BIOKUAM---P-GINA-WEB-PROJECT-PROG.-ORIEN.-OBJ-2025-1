@@ -1,0 +1,115 @@
+<!-- =======================
+     REGISTRO DEL BARCO - BKM
+     FECHA: 22-04-2025
+     PROGRAMADO POR: JSNT
+     ======================= -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>REGISTRO DEL BARCO - BKM</title>
+
+  <!-- [JSNT] Enlace al archivo de estilos del formulario del barco -->
+  <link rel="stylesheet" href="stylebarco.css"/>
+
+  <!-- [JSNT] Ícono de la pestaña (favicon) -->
+  <link rel="shortcut icon" href="IMG/LOGO DEL BARCO BKM.png" type="image/x-icon">
+
+  <!-- [JSNT] Fuentes personalizadas desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- [JSNT] Encabezado con logo y menú de navegación -->
+  <header>
+    <div class="logo">
+      <div class="logo-box">BKM</div>
+      <p class="biokuam_subtitle">BIOKUAM</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="pagina.principal.html">PÁGINA PRINCIPAL</a></li>
+        <li><a href="registrobarco.html">REGISTRO DEL BARCO</a></li>
+        <li><a href="registrofinca.html" target="_blank">REGISTRO FINCA Y CULTIVO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- [JSNT] Contenedor principal del formulario de registro del barco -->
+  <main class="main-container">
+    <div class="form-container">
+      <h2>REGISTRO DEL BARCO (BKM):</h2>
+
+      <!-- [JSNT] Formulario de registro del barco con campos obligatorios -->
+      <form id="registroBarcoForm">
+        
+        <!-- [JSNT] Campo para nombre del barco -->
+        <label>Nombre del Barco:
+          <input type="text" id="nombre_barco" name="nombre_barco" required>
+        </label>
+        
+        <!-- [JSNT Campo para IMEI del barco -->
+        <label>IMEI del Barco:
+          <input type="text" id="imei_barco" name="imei_barco" required>
+        </label>
+
+        <!-- [JSNT] Checkboxes para funcionalidades seleccionables del barco -->
+        <label>Funcionalidades del Barco (puede seleccionar varias):</label>
+        <label><input type="checkbox" name="funcionalidades" value="Funcion 1"> Funcion </label>
+        <label><input type="checkbox" name="funcionalidades" value="Funcion 2"> Funcion 2</label>
+        <label><input type="checkbox" name="funcionalidades" value="Funcion 3"> Funcion 3</label>
+        <label><input type="checkbox" name="funcionalidades" value="Funcion 4"> Funcion 4</label>
+        <label><input type="checkbox" name="funcionalidades" value="Funcion 5"> Funcion 5</label>
+
+        <!-- [JSNT] Campo para correo electrónico del responsable del barco -->
+        <label>Correo electrónico:
+          <input type="email" id="correo_barco" name="correo_barco" required>
+        </label>
+
+        <!-- [JSNT] Botón para enviar el formulario -->
+        <button type="submit">ENVIAR REGISTRO</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- [JSNT] Pie de página con redes sociales, información y autores -->
+  <footer>
+    <div class="footer-section">
+      <h4>Redes Sociales</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Más Información</h4>
+      <ul>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Autores</h4>
+      <p>Equipo interdisciplinario de Cálculo, POO, Física y Estadística.<br>Simijaca, Cundinamarca.</p>
+    </div>
+  </footer>
+
+  <!-- [JSNT] SDK de EmailJS para enviar correos al registrar el barco -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("RIg9EusJUaGt9GZE3"); // Tu clave pública
+    })();
+  </script>
+
+  <!-- [JSNT] Script externo con la lógica de registro del barco -->
+  <script src="registro-barco.js"></script>
+
+</body>
+</html>

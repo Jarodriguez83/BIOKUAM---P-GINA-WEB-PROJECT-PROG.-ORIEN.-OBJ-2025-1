@@ -1,0 +1,218 @@
+<!-- =======================
+     PANEL PRINCIPAL - BIOKUAM
+     FECHA: 08-04-2025
+     PROGRAMADO POR: CMCB / JARR
+     ======================= -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- [CMCB] Configuración general de codificación y vista responsive -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- [JARR] Título de la pestaña y enlaces de estilos -->
+  <title>PANEL PRINCIPAL - BIOKUAM</title>
+  <link rel="stylesheet" href="pagina-principal.css"/>
+  <link rel="shortcut icon" href="IMG/LOGO DEL BARCO BKM.png" type="image/x-icon">
+  
+  <!-- [CMCB] Fuente Poppins desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- [JARR] Fuentes adicionales para estilo personalizado -->
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- [CMCB] Encabezado con logo, navegación y usuario -->
+  <header>
+    <div class="logo">
+      <div class="logo-box">BKM</div>
+      <p class="biokuam_subtitle">BIOKUAM</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#dashboard" onclick="mostrarSeccion('dashboard')">DASHBOARD</a></li>
+        <li><a href="#monitoreo" onclick="mostrarSeccion('monitoreo')">MONITOREO</a></li>
+        <li><a href="#reportes" onclick="mostrarSeccion('reportes')">REPORTES</a></li>
+        <li><a href="index.html" class="logout-btn">CERRAR SESIÓN</a></li>
+      </ul>
+    </nav>
+    <div class="user-info">
+      <span id="usuario-nombre"></span>
+      <div class="user-avatar">👤</a></div>
+    </div>
+  </header>
+
+  <main class="main-dashboard">
+    
+    <!-- [JARR] Sección principal: Dashboard -->
+    <section id="dashboard" class="dashboard-section active">
+      <div class="welcome-banner">
+        <h1>¡Bienvenido al Sistema BIOKUAM!</h1>
+        <p>Monitoreo inteligente de calidad del agua para cultivos de maíz</p>
+      </div>
+
+      <!-- [CMCB] Tarjetas con estadísticas principales -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">🚤</div>
+          <div class="stat-info">
+            <h3>Barcos Activos</h3>
+            <span class="stat-number">3</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🌾</div>
+          <div class="stat-info">
+            <h3>Fincas Registradas</h3>
+            <span class="stat-number">12</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💧</div>
+          <div class="stat-info">
+            <h3>Análisis Realizados</h3>
+            <span class="stat-number">247</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- [JARR] Sección de acciones rápidas -->
+      <div class="quick-actions">
+        <h2>Acciones Rápidas</h2>
+        <div class="actions-grid">
+          <button class="action-btn" onclick="mostrarSeccion('monitoreo')">
+            <span class="action-icon">📱</span>
+            Monitoreo en Tiempo Real
+          </button>
+          <button class="action-btn" onclick="window.open('registrobarco.html', '_blank')">
+            <span class="action-icon">⚓</span>
+            Registrar Nuevo Barco
+          </button>
+          <button class="action-btn" onclick="window.open('registrofinca.html', '_blank')">
+            <span class="action-icon">🏡</span>
+            Registrar Nueva Finca
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- [CMCB] Sección de monitoreo en tiempo real -->
+    <section id="monitoreo" class="dashboard-section">
+      <center><h2>MONITOREO DEL BKM</h2></center>
+      
+      <!-- [JARR] Tarjetas de monitoreo por barco -->
+      <div class="monitoring-grid">
+        <div class="monitor-card">
+          <h3>Barco BKM-001</h3>
+          <div class="sensor-data">
+            <div class="sensor-item">
+              <span class="sensor-label">pH del Agua:</span>
+              <span class="sensor-value good">##</span>
+            </div>
+            <div class="sensor-item">
+              <span class="sensor-label">Temperatura:</span>
+              <span class="sensor-value good">##°C</span>
+            </div>
+            <div class="sensor-item">
+              <span class="sensor-label">Oxígeno Disuelto:</span>
+              <span class="sensor-value warning">## mg/L</span>
+            </div>
+          </div>
+          <div class="status-indicator online">En Línea</div>
+        </div>
+
+        <div class="monitor-card">
+          <h3>Barco BKM-002</h3>
+          <div class="sensor-data">
+            <div class="sensor-item">
+              <span class="sensor-label">pH del Agua:</span>
+              <span class="sensor-value warning">##</span>
+            </div>
+            <div class="sensor-item">
+              <span class="sensor-label">Temperatura:</span>
+              <span class="sensor-value good">##°C</span>
+            </div>
+            <div class="sensor-item">
+              <span class="sensor-label">Oxígeno Disuelto:</span>
+              <span class="sensor-value danger">## mg/L</span>
+            </div>
+          </div>
+          <div class="status-indicator online">En Línea</div>
+        </div>
+      </div>
+
+      <!-- [CMCB] Panel con alertas recientes del sistema -->
+      <div class="alerts-panel">
+        <h3>Alertas Recientes</h3>
+        <div class="alert-item warning">
+          <span class="alert-time">10:30 AM</span>
+          <span class="alert-message">Oxígeno bajo detectado en BKM-002</span>
+        </div>
+        <div class="alert-item info">
+          <span class="alert-time">09:15 AM</span>
+          <span class="alert-message">Análisis completado en Finca La Esperanza</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- [JARR] Sección de reportes del sistema -->
+    <section id="reportes" class="dashboard-section">
+      <center><h2>REPORTES Y ANÁLISIS</h2></center>
+      
+          <!-- [JARR] Contenedor para visualización del ph en tiempo real -->
+      <div class="chart-container">
+        <center><h3>VISUALIZACIÓN DEL PH EN TIEMPO REAL</h3></center>
+          <p class="info_ph_tr"> DATOS DEL PH CAPTURADOS DESDE EL SENSOR PH 4502C - SIMIJACA, CUNDINAMARCA</p>
+        <div class="chart-placeholder">
+          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2983622/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2983622/widgets/1089224"></iframe>
+        </div>
+      </div>
+
+      <!-- [CMCB] Reportes descargables -->
+      <div class="reports-grid">
+        <div class="report-card">
+          <h3>REPORTE SEMANAL</h3>
+          <p>Análisis de calidad del agua de la última semana</p>
+          <div class="report-stats">
+            <span>Muestras: ##</span>
+            <span>Promedio pH: ##</span>
+          </div>
+          <button class="btn-download">Descargar PDF</button>
+        </div>
+
+        <div class="report-card">
+          <h3>REPORTE MENSUAL</h3>
+          <p>Resumen completo del mes actual</p>
+          <div class="report-stats">
+            <span>Muestras: ##</span>
+            <span>Calidad: ##</span>
+          </div>
+          <button class="btn-download">Descargar PDF</button>
+        </div>
+      </div>
+
+
+    </section>
+
+  </main>
+
+  <!-- [CMCB] Script para alternar entre secciones del panel -->
+  <script>
+    function mostrarSeccion(seccionId) {
+      // Ocultar todas las secciones
+      const secciones = document.querySelectorAll('.dashboard-section');
+      secciones.forEach(seccion => {
+        seccion.classList.remove('active');
+      });
+      
+      // Mostrar la sección seleccionada
+      document.getElementById(seccionId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!-- =======================
+     REGISTRO DE FINCA Y CULTIVO - BKM
+     FECHA: 29-04-2025
+     PROGRAMADO POR: JARR
+     ======================= -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>REGISTRO DE FINCA Y CULTIVO - BKM</title>
+
+  <!-- [JARR] Enlace a archivo CSS para estilos del registro finca y cultivo -->
+  <link rel="stylesheet" href="registrofinca.css"/>
+
+  <!-- [JARR] Ícono para la pestaña (favicon) -->
+  <link rel="shortcut icon" href="IMG/LOGO DEL BARCO BKM.png" type="image/x-icon">
+
+  <!-- [JARR] Fuente desde Google Fonts para texto -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- [JARR] Encabezado con logo y navegación -->
+  <header>
+    <div class="logo">
+      <div class="logo-box">BKM</div>
+      <p class="biokuam_subtitle">BIOKUAM</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="pagina.principal.html">PÁGINA PRINCIPAL</a></li>
+        <li><a href="registrobarco.html">REGISTRO DEL BARCO</a></li>
+        <li><a href="registrofinca.html" target="_blank">REGISTRO FINCA Y CULTIVO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- [JARR] Contenedor principal del formulario registro finca y cultivo con estilo VIP -->
+  <main class="main-container">
+    <div class="registro-finca-vip">
+      <h2>REGISTRO DE INFORMACIÓN DE LA FINCA Y EL CULTIVO</h2>
+
+      <!-- [JARR] Formulario con función JS para enviar registro y validación -->
+      <form id="registroFincaForm" onsubmit="enviarRegistroFinca(event)">
+        
+        <!-- [JARR] Campo para nombre de la finca -->
+        <label>Nombre de la finca:
+          <input type="text" id="nombreFinca" required>
+        </label>
+        
+        <!-- [JARR] Select para escoger la vereda dentro de Simijaca -->
+        <label>Vereda (Simijaca, Cundinamarca):
+          <select id="vereda" required>
+            <option value="">Seleccione una vereda</option>
+            <option value="Aposentos">Aposentos</option>
+            <option value="Barroblanco">Barroblanco</option>
+            <option value="Buenavista">Buenavista</option>
+            <option value="Chicua">Chicua</option>
+            <option value="Guanata">Guanata</option>
+            <option value="Laguna">Laguna</option>
+            <option value="Llanadas">Llanadas</option>
+            <option value="Maravillas">Maravillas</option>
+            <option value="Pantano de Arce">Pantano de Arce</option>
+            <option value="San Antonio">San Antonio</option>
+          </select>
+        </label>
+
+        <!-- [JARR] Campo para número de hectáreas -->
+        <label>Número de hectáreas:
+          <input type="number" id="hectareas" required>
+        </label>
+
+        <!-- [JARR] Campo para fecha de inicio del cultivo -->
+        <label>Fecha de inicio del cultivo:
+          <input type="date" id="fechaCultivo" required>
+        </label>
+
+        <!-- [JARR] Campo para describir dificultades presentadas -->
+        <label>Dificultades:
+          <textarea id="dificultades" rows="4" required></textarea>
+        </label>
+
+        <!-- [JARR] Campo para correo electrónico del agricultor -->
+        <label>Correo del agricultor:
+          <input type="email" id="correoAgricultor" required>
+        </label>
+
+        <!-- [JARR] Botón para enviar el formulario -->
+        <button type="submit">ENVIAR REGISTRO</button>
+      </form>
+      
+      <!-- [JARR] SDK de EmailJS para enviar correos -->
+      <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+      <script>
+        (function () {
+          emailjs.init("RIg9EusJUaGt9GZE3"); // Tu clave pública
+        })();
+      </script>
+
+      <!-- [JARR] Script externo con la lógica de envío y validaciones -->
+      <script src="registrofinca.js"></script>
+    </div>
+  </main>
+
+  <!-- [JARR] Footer con redes sociales, términos y autores -->
+  <footer id="footer">
+    <div class="footer-section">
+      <h4>Redes Sociales</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Más Información</h4>
+      <ul>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Autores</h4>
+      <p>Equipo interdisciplinario de Cálculo, POO, Física y Estadística.<br>Simijaca, Cundinamarca.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

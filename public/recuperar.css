@@ -1,0 +1,196 @@
+/* =======================
+     ESTILOS CSS SECUNDARIOS
+     FECHA: 15-04-2025
+     PROGRAMADO POR: JSNT
+     =======================/*
+/* CMCB Variables de colores del proyecto Biokuam */
+:root {
+  --naranja: #f57c00;
+  --azul: #0d47a1;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --gris-claro: #f5f5f5;
+}
+
+/* CMCB Configuración general de la fuente y fondo de la página */
+body {
+  font-family: "Handlee", cursive;
+  margin: 0;
+  background: var(--gris-claro);
+  color: var(--negro);
+}
+
+/* CMCB Estilos del header de navegación principal */
+header {
+  background: var(--azul);
+  color: var(--blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+/* CMCB Estilo contenedor del logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* CMCB Caja destacada del logo del proyecto */
+.logo-box {
+  background: var(--naranja);
+  color: var(--blanco);
+  padding: 10px 15px;
+  font-weight: 700;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-family: "Handlee", cursive;
+}
+
+/* CMCB Estilo del menú de navegación */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* CMCB Enlaces del menú de navegación */
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+/* CMCB Efecto hover sobre los enlaces del menú */
+nav a:hover {
+  color: var(--naranja);
+}
+
+/* CMCB Contenedor principal con dos paneles */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+/* CMCB Panel izquierdo y derecho en formato responsive */
+.left-panel, .right-panel {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+/* CMCB Título principal dentro del panel izquierdo */
+.left-panel h1 {
+  color: var(--azul);
+  font-size: 28px;
+}
+
+/* JSNT: Contenedor principal centrado con fondo oscuro, padding y sombra */
+.container {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: #0d0d0d;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* JSNT: Títulos h2 centrados con margen inferior */
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-family: "Handlee", cursive;
+}
+
+/* JSNT: Etiquetas de formulario con display bloque y márgenes */
+label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  font-family: "Handlee", cursive;
+}
+
+/* JSNT: Inputs con ancho completo, padding, sin borde y bordes redondeados */
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+/* JSNT: Botones con ancho completo, fondo naranja, texto blanco y efecto hover */
+button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #ff851b;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ffa94d;
+}
+
+/* CMCB Estilo general del footer */
+footer {
+  background: var(--azul);
+  color: var(--blanco);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+  font-family: "Handlee", cursive;
+}
+
+/* CMCB Sección individual del footer */
+.footer-section {
+  min-width: 200px;
+  margin: 10px;
+}
+
+/* CMCB Título de cada sección del footer */
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+/* CMCB Lista sin estilos dentro del footer */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* CMCB Enlaces del footer */
+.footer-section a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+/* CMCB Hover sobre enlaces del footer */
+.footer-section a:hover {
+  color: var(--naranja);
+}
+
+/* JSNT: Formularios ocultos por defecto */
+.formulario {
+  display: none;
+  font-family: "Handlee", cursive;
+}
+
+/* JSNT: Formularios activos visibles */
+.formulario.activo {
+  display: block;
+  color: white;
+  font-family: "Handlee", cursive;
+}
+
+/* JSNT: Estilos del botón para enviar el código */
+.enviar_codigo {
+  font-family: "Handlee", cursive;
+}

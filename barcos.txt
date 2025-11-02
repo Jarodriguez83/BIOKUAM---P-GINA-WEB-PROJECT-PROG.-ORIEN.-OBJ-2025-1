@@ -1,0 +1,11 @@
+[
+  {
+    "nombre_barco": "Barco DPOO",
+    "imei_barco": "17897324324324234",
+    "funcionalidades": "Funcion 4",
+    "correo": "spgaravito@ucatolica.edu.co",
+    "id": "BARCO_1749835372723_vxrd947ol",
+    "usuario_id": "BKM1749835250476uio",
+    "fecha_registro": "2025-06-13T17:22:52.728Z"
+  }
+]

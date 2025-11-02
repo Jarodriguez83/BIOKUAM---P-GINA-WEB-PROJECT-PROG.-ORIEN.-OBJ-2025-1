@@ -1,0 +1,102 @@
+<!-- =======================
+     RECUPERAR CONTRASEÑA - BIOKUAM
+     FECHA: 15-04-2025
+     PROGRAMO POR: CMMM
+     ======================= -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="IMG/LOGO DEL BARCO BKM.png" type="image/x-icon">
+  <title>RECUPERACIÓN DE CONTRASEÑA - BIOKUM</title>
+  
+  <!-- [CMMM] Enlace al archivo CSS para estilos -->
+  <link rel="stylesheet" href="recuperar.css">
+  
+  <!-- [CMCB] Fuente Poppins desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- [CMCB] Conexión previa para optimizar carga de fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- [CMCB] Fuente adicional: Handlee y Poetsen One -->
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Poetsen+One&display=swap" rel="stylesheet">
+
+  <!-- [CMCB] Encabezado principal con logo y menú -->
+  <header>
+    <div class="logo">
+      <div class="logo-box">BKM</div>
+      <p class="biokuam_subtitle">BIOKUAM</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIAR SESIÓN</a></li>
+        <li><a href="#" onclick="mostrarFormulario('registro')">REGISTRARSE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- [CMMM] Contenedor principal del proceso de recuperación -->
+  <main class="container">
+    <h2>RECUPERAR CONTRASEÑA</h2>
+    
+    <!-- [CMMM] Paso 1: el usuario ingresa su correo para recibir el código -->
+    <form id="form-correo" class="formulario activo">
+      <label for="correo">INGRESE SU CORREO ELECTRÓNICO:</label>
+      <input type="email" id="correo" required>
+      <button type="submit" class="enviar_codigo">ENVIAR CÓDIGO</button>
+    </form>
+
+    <!-- [CMMM] Paso 2: el usuario ingresa el código recibido por correo -->
+    <form id="form-codigo" class="formulario">
+      <label for="codigo">Digita el código de verificación enviado:</label>
+      <input type="text" id="codigo" required>
+      <button type="submit">Verificar código</button>
+    </form>
+
+    <!-- [CMMM] Paso 3: el usuario crea una nueva contraseña -->
+    <form id="form-nueva" class="formulario">
+      <label for="nueva">Nueva contraseña:</label>
+      <input type="password" id="nueva" required>
+      <label for="confirmar">Confirmar nueva contraseña:</label>
+      <input type="password" id="confirmar" required>
+      <button type="submit">Cambiar contraseña</button>
+    </form>
+  </main>
+
+   <!-- [JSNT] Pie de página con enlaces y autores -->
+  <footer id="footer">
+    <div class="footer-section">
+      <h4>Redes Sociales</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Más Información</h4>
+      <ul>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Autores</h4>
+      <p>Equipo interdisciplinario de Cálculo, POO, Física y Estadística.<br>Simijaca, Cundinamarca.</p>
+    </div>
+  </footer>
+
+  <!-- [CMMM] Integración con EmailJS para envío de correos -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("RIg9EusJUaGt9GZE3");
+  </script>
+
+  <!-- [CMMM] Lógica de recuperación de contraseña en JS -->
+  <script src="recuperar.js"></script>
+</body>
+</html>

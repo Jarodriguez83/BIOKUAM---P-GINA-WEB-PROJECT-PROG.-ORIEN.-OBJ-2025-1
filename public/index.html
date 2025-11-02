@@ -1,0 +1,158 @@
+<!-- =======================
+     PÁGINA DE REGISTRO - BIOKUAM
+     FECHA: 01-04-2025
+     PROGRAMADO POR: CMCB / JSNT
+     ======================= -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BIOKUAM - LOGIN (BKM)</title>
+
+  <!-- [CMCB] Enlace a hoja de estilos CSS -->
+  <link rel="stylesheet" href="styleinicio.css"/>
+
+  <!-- [CMCB] Ícono del sitio (favicon) en la pestaña -->
+  <link rel="shortcut icon" href="IMG/LOGO DEL BARCO BKM.png" type="image/x-icon">
+
+  <!-- [CMCB] Fuente Poppins desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- [CMCB] Conexión previa para optimizar carga de fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- [CMCB] Fuente adicional: Handlee y Poetsen One -->
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- [CMCB] Encabezado principal con logo y menú -->
+  <header>
+    <div class="logo">
+      <div class="logo-box">BKM</div>
+      <p class="biokuam_subtitle">BIOKUAM</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIAR SESIÓN</a></li>
+        <li><a href="#" onclick="mostrarFormulario('registro')">REGISTRARSE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- [CMCB] Contenedor principal con dos paneles -->
+  <main class="main-container">
+    <!-- [CMCB] Panel izquierdo: bienvenida y descripción del proyecto -->
+    <div class="left-panel">
+      <h1 class="bienvenido_title">¡BIENVENIDO A BIOKUAM!</h1>
+      <img src="IMG/LOGO DEL BARCO BKM.png" alt="Logo BIOKUAM" class="img_bkm_index" onerror="this.style.display='none'; console.error('Error cargando imagen:', this.src)">
+      <p>Biokuam es un proyecto de innovación agrícola que utiliza tecnología e inteligencia artificial para analizar la calidad del agua usada en cultivos de maíz en Simijaca, Cundinamarca.</p>
+    </div>
+
+    <!-- [JSNT] Panel derecho: pestañas para iniciar sesión o registrarse -->
+    <div class="right-panel">
+      <div class="tabs">
+        <button class="tab-button active" onclick="mostrarFormulario('login')">INICIAR SESIÓN</button>
+        <button class="tab-button" onclick="mostrarFormulario('registro')">REGISTRARSE</button>
+      </div>
+
+      <!-- [JSNT] Formulario de inicio de sesión -->
+      <form id="loginForm" class="form active" onsubmit="iniciarSesion(event)">
+        <label>CORREO ELECTRÓNICO
+          <input type="text" id="loginUsuario" placeholder="INGRESE EL CORREO ELECTRÓNICO" required />
+        </label>
+        <label>CONTRASEÑA
+          <div class="password-wrapper">
+            <input type="password" id="loginPassword" placeholder="INGRESE LA CONTRASEÑA" required />
+            <span class="toggle-password" onclick="togglePassword('loginPassword', this)">◉</span>
+          </div>
+        </label>
+        <p><a href="recuperar.html" class="olvide">¿Olvidaste tu contraseña?</a></p>
+        <button type="submit">INGRESAR</button>
+        <p class="switch-text">¿No tienes cuenta? <a href="#" onclick="mostrarFormulario('registro')">Crear una</a></p>
+      </form>
+
+      <!-- [JSNT] Formulario de registro de nuevo usuario -->
+      <form id="registroForm" class="form">
+        <label>Nombre completo
+          <input type="text" id="nombre" required />
+        </label>
+        <label>Celular
+          <input type="tel" id="celular" required />
+        </label>
+        <label>Email
+          <input type="email" id="correo" required />
+        </label>
+        <label>Tipo de documento
+          <select id="tipo_documento" required>
+            <option value="">Seleccione</option>
+            <option value="CC">Cédula de Ciudadanía</option>
+            <option value="TI">Tarjeta de Identidad</option>
+          </select>
+        </label>
+        <label>Número de documento
+          <input type="text" id="numero_documento" required />
+        </label>
+        <label>Contraseña
+          <div class="password-wrapper">
+            <input type="password" id="contrasena" required />
+            <span class="toggle-password" onclick="togglePassword('contrasena', this)">◉</span>
+          </div>
+        </label>
+        <label>Confirmar contraseña
+          <div class="password-wrapper">
+            <input type="password" id="confirmar_contrasena" required />
+            <span class="toggle-password" onclick="togglePassword('confirmar_contrasena', this)">◉</span>
+          </div>
+        </label>
+        <label>Foto de perfil (opcional)
+          <input type="file" id="foto" accept="image/*" />
+        </label>
+        <label class="terminos">
+          <input type="checkbox" id="terminos" required />
+          Acepto los <a href="#footer">TÉRMINOS Y CONDICIONES</a>
+        </label>
+        <button type="submit">CREAR CUENTA</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- [JSNT] Pie de página con enlaces y autores -->
+  <footer id="footer">
+    <div class="footer-section">
+      <h4>Redes Sociales</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Más Información</h4>
+      <ul>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Autores</h4>
+      <p>Equipo interdisciplinario de Cálculo, POO, Física y Estadística.<br>Simijaca, Cundinamarca.</p>
+    </div>
+  </footer>
+
+  <!-- [JSNT] Librería EmailJS para envío de correos -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("RIg9EusJUaGt9GZE3"); // [JSNT] Inicializa EmailJS con clave pública
+    })();
+  </script>
+
+  <!-- [JSNT] Archivo de funciones JavaScript externas -->
+  <script src="script.js"></script>
+
+</body>
+</html>

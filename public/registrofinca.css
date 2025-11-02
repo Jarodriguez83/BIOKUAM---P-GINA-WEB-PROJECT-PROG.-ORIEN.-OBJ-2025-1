@@ -1,0 +1,181 @@
+/* =======================
+     ESTILOS CSS PRINCIPALES
+     FECHA: 29-04-2025
+     PROGRAMADO POR: JSNT, CMMM
+     ======================= /*
+
+/* JSNT, CMMM: Variables CSS para paleta de colores */
+:root {
+  --naranja: #f57c00;
+  --azul: #0d47a1;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --gris-claro: #f5f5f5;
+}
+
+/* JSNT, CMMM: Estilos básicos del body con fuente cursiva y fondo claro */
+body {
+  font-family: cursive;
+  margin: 0;
+  background: var(--gris-claro);
+  color: var(--negro);
+}
+
+/* JSNT, CMMM: Header con fondo azul, texto blanco y diseño flex para logo y navegación */
+header {
+  background: var(--azul);
+  color: var(--blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+/* JSNT, CMMM: Logo con diseño flex y alineación centrada */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* JSNT, CMMM: Caja del logo con fondo naranja y bordes redondeados */
+.logo-box {
+  background: var(--naranja);
+  color: var(--blanco);
+  padding: 10px 15px;
+  font-weight: 700;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-family: "Handlee", cursive;
+}
+
+/* JSNT, CMMM: Lista de navegación horizontal con espacio entre elementos */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* JSNT, CMMM: Enlaces de navegación con texto blanco y sin subrayado */
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+/* JSNT, CMMM: Cambio de color al pasar el mouse sobre enlaces de navegación */
+nav a:hover {
+  color: var(--naranja);
+}
+
+/* JSNT, CMMM: Contenedor principal centrado con padding */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* JSNT, CMMM: Contenedor destacado tipo VIP para registro de finca */
+.registro-finca-vip {
+  background: linear-gradient(135deg, #ffffff, #e0ecff);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+  border: 2px solid #FFA500;
+}
+
+/* JSNT, CMMM: Título h2 centrado y con color azul oscuro */
+.registro-finca-vip h2 {
+  text-align: center;
+  color: #001f3f;
+  margin-bottom: 1rem;
+}
+
+/* JSNT, CMMM: Formulario con disposición vertical */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* JSNT, CMMM: Etiquetas con margen inferior y peso de fuente media */
+label {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* JSNT, CMMM: Inputs, selects y textarea con padding, bordes redondeados y borde gris */
+input, select, textarea {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+}
+
+/* JSNT, CMMM: Botones con fondo azul oscuro, texto blanco, bordes redondeados y transición */
+button {
+  padding: 0.8rem;
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+/* JSNT, CMMM: Cambio de color y texto al hacer hover en botones */
+button:hover {
+  background-color: #FFA500;
+  color: #001f3f;
+}
+
+/* JSNT, CMMM: Footer con fondo azul oscuro, texto blanco y distribución flex */
+footer {
+  background-color: #001f3f;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+/* JSNT, CMMM: Secciones del footer con flex y márgenes */
+.footer-section {
+  flex: 1;
+  margin: 1rem;
+  min-width: 200px;
+}
+
+/* JSNT, CMMM: Títulos h4 del footer con margen inferior */
+.footer-section h4 {
+  margin-bottom: 1rem;
+}
+
+/* JSNT, CMMM: Listas sin estilo en el footer */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* JSNT, CMMM: Items de listas con margen inferior */
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* JSNT, CMMM: Enlaces en el footer con texto blanco y sin subrayado */
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* JSNT, CMMM: Items de listas con fuente cursiva */
+li {
+  font-family: cursive;
+}
