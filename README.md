@@ -1,0 +1,2 @@
+# BIOKUAM---P-GINA-WEB-PROJECT-PROG.-ORIEN.-OBJ-2025-1
+Proyecto 'BIOKUAM' página web de prototipo de embarcación para la medición de pH en el agua usada para cultivos de maíz en Simijaca, Cundinamarca. Desarrollo de la página web para registros de 'Usuarios', 'Embarcaciones' y 'Fincas de Cultivos' que ayudará tanto a los usuarios del prototipo para evaluaciones de la medición, como a las entidades.
