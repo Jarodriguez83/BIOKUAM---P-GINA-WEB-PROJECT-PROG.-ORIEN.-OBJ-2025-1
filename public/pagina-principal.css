@@ -270,6 +270,7 @@ nav a:hover {
 
 /* Monitoring Section */
 #monitoreo h2,
+#api h2,
 #reportes h2 {
   color: var(--azul);
   margin-bottom: 25px;
@@ -503,3 +504,21 @@ nav a:hover {
   margin-bottom: 2%;
   font-family: "Handlee", cursive;
 }
+
+/* Estilos para el contenedor del clima - JSNT */
+.clima-container {
+      background: linear-gradient(135deg, #002147, #ff7b00);
+      color: white;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      margin: 40px auto;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .clima-container p {
+      font-size: 1.1rem;
+      margin: 8px 0;
+    }

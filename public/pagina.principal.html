@@ -36,6 +36,7 @@
         <li><a href="#dashboard" onclick="mostrarSeccion('dashboard')">DASHBOARD</a></li>
         <li><a href="#monitoreo" onclick="mostrarSeccion('monitoreo')">MONITOREO</a></li>
         <li><a href="#reportes" onclick="mostrarSeccion('reportes')">REPORTES</a></li>
+        <li><a href="#api" onclick="mostrarSeccion('api')">API</a></li>
         <li><a href="index.html" class="logout-btn">CERRAR SESIÓN</a></li>
       </ul>
     </nav>
@@ -201,8 +202,20 @@
 
     </section>
 
+    <section id="api" class="dashboard-section">
+      <center><h2>CONDICIONES CLIMÁTICAS EN SIMIJACA, CUNDINAMARCA</h2></center>
+    <div class="clima-container">
+    <p id="ubicacion"></p>
+    <p id="temperatura"></p>
+    <p id="descripcion"></p>
+    <p id="humedad"></p>
+    <p id="viento"></p>
+  </div>
+    </section>
+    <script src="clima.js"></script>
   </main>
 
+  
   <!-- [CMCB] Script para alternar entre secciones del panel -->
   <script>
     function mostrarSeccion(seccionId) {
