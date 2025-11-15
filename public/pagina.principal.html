@@ -205,14 +205,40 @@
     <section id="api" class="dashboard-section">
       <center><h2>CONDICIONES CLIMÁTICAS EN SIMIJACA, CUNDINAMARCA</h2></center>
     <div class="clima-container">
-    <p id="ubicacion"></p>
-    <p id="temperatura"></p>
-    <p id="descripcion"></p>
-    <p id="humedad"></p>
-    <p id="viento"></p>
-  </div>
+      <p id="ubicacion"></p>
+      <p id="temperatura"></p>
+      <p id="descripcion"></p>
+      <p id="humedad"></p>
+      <p id="viento"></p>
+    </div>
+
+       <div class="biokuam-chat-header">
+        <h1>🤖 BioKuaM • IA Agrícola</h1>
+        <h2>powered by Google Gemini API</h2>
+    </div>
+
+    <!-- DESCRIPCIÓN -->
+    <div class="biokuam-chat-description">
+        Este chat usa IA para ayudarte con dudas sobre tus cultivos usando los datos del sistema:
+        pH, humedad, temperatura y recomendaciones para riego o corrección del agua.
+    </div>
+
+    <!-- CHAT -->
+    <div id="biokuamChatBox" class="biokuam-chat-box"></div>
+
+    <!-- INPUT -->
+    <div class="biokuam-input-area">
+        <textarea id="biokuamUserInput" placeholder="Escribe tu pregunta aquí..."></textarea>
+        <button id="biokuamSendBtn">Enviar</button>
+    </div>
+
+</div>
+
+
     </section>
-    <script src="clima.js"></script>
+    <script src="chat.js"></script>
+    
+    
   </main>
 
   

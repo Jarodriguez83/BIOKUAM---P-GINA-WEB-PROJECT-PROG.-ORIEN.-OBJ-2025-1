@@ -522,3 +522,114 @@ nav a:hover {
       font-size: 1.1rem;
       margin: 8px 0;
     }
+
+
+
+
+  .biokuam-chat-container {
+            width: 450px;
+            height: 90vh;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+            font-family: "Poppins", sans-serif;
+        }
+
+        .biokuam-chat-header {
+            background: #002244;
+            padding: 25px;
+            text-align: center;
+            color: white;
+        }
+
+        .biokuam-chat-header h1 {
+            font-size: 22px;
+            margin: 0;
+        }
+
+        .biokuam-chat-header h2 {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .biokuam-chat-description {
+            background: #ff8c00;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .biokuam-chat-box {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: #f5f5f5;
+        }
+
+        .biokuam-msg-user {
+            align-self: flex-end;
+            background: #ff8c00;
+            color: white;
+            padding: 12px;
+            border-radius: 12px 12px 0 12px;
+            max-width: 70%;
+            font-size: 15px;
+        }
+
+        .biokuam-msg-ai {
+            align-self: flex-start;
+            background: #eaeaea;
+            color: #222;
+            padding: 12px;
+            border-radius: 12px 12px 12px 0;
+            max-width: 70%;
+            font-size: 15px;
+            border-left: 4px solid #002244;
+        }
+
+        .biokuam-input-area {
+            padding: 12px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-top: 2px solid #ddd;
+        }
+
+        .biokuam-input-area textarea {
+            flex: 1;
+            height: 55px;
+            padding: 10px;
+            border-radius: 12px;
+            outline: none;
+            border: 2px solid #002244;
+            resize: none;
+            font-size: 14px;
+        }
+
+        .biokuam-input-area textarea:focus {
+            border-color: #ff8c00;
+        }
+
+        .biokuam-input-area button {
+            background: #002244;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .biokuam-input-area button:hover {
+            background: #ff8c00;
+        }
