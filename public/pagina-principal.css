@@ -534,7 +534,7 @@ nav a:hover {
         /* CSS DEL ASISTENTE CON GEMINI - BIOKUAM AI */
 
         .biokuam-chat-container {
-            width: 450px;
+            width: 850px;
             height: 90vh;
             background: #ffffff;
             border-radius: 20px;
@@ -549,9 +549,10 @@ nav a:hover {
 
         .biokuam-chat-header {
             background: #002244;
-            padding: 25px;
+            padding: 15px;
             text-align: center;
             color: white;
+            margin-bottom: -23px;
         }
 
         .biokuam-chat-header h1 {
@@ -572,6 +573,7 @@ nav a:hover {
             text-align: center;
             font-size: 14px;
             font-weight: 500;
+            font-family: 'Handlee', cursive;
         }
 
         .biokuam-chat-box {

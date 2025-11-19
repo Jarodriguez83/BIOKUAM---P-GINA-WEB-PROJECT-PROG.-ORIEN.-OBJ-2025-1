@@ -51,7 +51,7 @@
         <li><a href="#dashboard" onclick="mostrarSeccion('dashboard')">DASHBOARD</a></li>
         <li><a href="#monitoreo" onclick="mostrarSeccion('monitoreo')">MONITOREO</a></li>
         <li><a href="#reportes" onclick="mostrarSeccion('reportes')">REPORTES</a></li>
-        <li><a href="#api" onclick="mostrarSeccion('api')">API</a></li>
+        <li><a href="#api" onclick="mostrarSeccion('api')">ASISTENTE IA</a></li>
         <li><a href="index.html" class="logout-btn">CERRAR SESIÓN</a></li>
       </ul>
     </nav>
@@ -177,7 +177,14 @@
     <!-- [JARR] Sección de reportes del sistema -->
     <section id="reportes" class="dashboard-section">
       <center><h2>REPORTES Y ANÁLISIS</h2></center>
-      
+      <div class="clima-container">
+      <p id="ubicacion"></p>
+      <p id="temperatura"></p>
+      <p id="descripcion"></p>
+      <p id="humedad"></p>
+      <p id="viento"></p>
+    </div>
+    <script></script>
           <!-- [JARR] Contenedor para visualización del ph en tiempo real -->
       <div class="chart-container">
         <center><h3>VISUALIZACIÓN DEL PH EN TIEMPO REAL</h3></center>
@@ -218,29 +225,20 @@
     </section>
 
     <section id="api" class="dashboard-section">
-      <center><h2>CONDICIONES CLIMÁTICAS EN SIMIJACA, CUNDINAMARCA</h2></center>
-    <div class="clima-container">
-      <p id="ubicacion"></p>
-      <p id="temperatura"></p>
-      <p id="descripcion"></p>
-      <p id="humedad"></p>
-      <p id="viento"></p>
-    </div>
-    <script src="clima.js"></script>
+    
 
     <!-- ESTRUCTURA COMPLETA DEL CHAT -->
     <div class="biokuam-chat-container">
 
         <!-- HEADER -->
         <div class="biokuam-chat-header">
-            <h1 style="  font-family: 'Handlee', cursive">Biokuam AI Assistant 🌽</h1>
-            <h2>Simijaca, Cundinamarca - Consultor Virtual</h2>
+            <h1 style="  font-family: 'Handlee', cursive">ASISTENTE BIOKUAM CON IA 'GEMINI'</h1>
+            <h2>SIMIJACA, CUNDINAMARCA</h2>
         </div>
 
         <!-- DESCRIPCIÓN -->
         <div class="biokuam-chat-description">
-            Este chat usa IA para ayudarte con dudas sobre tus cultivos usando los datos del sistema:
-            pH, humedad, temperatura y recomendaciones para riego o corrección del agua.
+            ESTE CHAT USA EL APOYO DE IA PARA AYUDARTE CON LA SOLUCIÓN DE LAS DUDAS QUE TENGAS SOBRE TUS CULTIVOS. TE RECOMENDAMOS USAR LOS DATOS DE: PH Y TEMPERATURA, PARA QUE TE PUEDA AYUDAR DE UNA FORMA MÁS REAL.
         </div>
 
         <!-- CHAT BOX -->
@@ -254,14 +252,14 @@
         <!-- INPUT -->
         <div class="biokuam-input-area">
             <textarea id="biokuamUserInput" placeholder="Escribe tu pregunta aquí..."></textarea>
-            <button id="biokuamSendBtn">Enviar</button>
+            <button id="biokuamSendBtn" style="font-family: 'Handlee', cursive;">ENVIAR</button>
         </div>
 
     </div>
 
 
     </section>
-    <script src="chat.js"></script>
+    <script src="api.js"></script>
     
     
   </main>
