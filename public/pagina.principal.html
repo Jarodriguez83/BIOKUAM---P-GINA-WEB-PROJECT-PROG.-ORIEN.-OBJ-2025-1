@@ -21,6 +21,21 @@
   
   <!-- [JARR] Fuentes adicionales para estilo personalizado -->
   <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Poetsen+One&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+
+
+  <!-- 1. CSS de Leaflet: Define los estilos y apariencia del mapa. -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
+<!-- 2. JS de Leaflet: Contiene toda la lógica y funciones para crear el mapa. -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20n6a9Kx/waD9wtlS+4s53S6X7tOAS+x+Z+aXgT9YgI="
+    crossorigin=""></script>
 </head>
 
 <body>
@@ -211,28 +226,38 @@
       <p id="humedad"></p>
       <p id="viento"></p>
     </div>
+    <script src="clima.js"></script>
 
-       <div class="biokuam-chat-header">
-        <h1>🤖 BioKuaM • IA Agrícola</h1>
-        <h2>powered by Google Gemini API</h2>
+    <!-- ESTRUCTURA COMPLETA DEL CHAT -->
+    <div class="biokuam-chat-container">
+
+        <!-- HEADER -->
+        <div class="biokuam-chat-header">
+            <h1 style="  font-family: 'Handlee', cursive">Biokuam AI Assistant 🌽</h1>
+            <h2>Simijaca, Cundinamarca - Consultor Virtual</h2>
+        </div>
+
+        <!-- DESCRIPCIÓN -->
+        <div class="biokuam-chat-description">
+            Este chat usa IA para ayudarte con dudas sobre tus cultivos usando los datos del sistema:
+            pH, humedad, temperatura y recomendaciones para riego o corrección del agua.
+        </div>
+
+        <!-- CHAT BOX -->
+        <div id="biokuamChatBox" class="biokuam-chat-box">
+            <!-- Mensaje inicial de bienvenida de la IA -->
+            <div class="biokuam-msg-ai">
+                ¡Hola! Soy el asistente virtual de Biokuam. Estoy aquí para ayudarte a optimizar tus cultivos de maíz. Pregúntame sobre el pH ideal, la temperatura del agua o cualquier duda que tengas sobre tu cosecha en Simijaca.
+            </div>
+        </div>
+
+        <!-- INPUT -->
+        <div class="biokuam-input-area">
+            <textarea id="biokuamUserInput" placeholder="Escribe tu pregunta aquí..."></textarea>
+            <button id="biokuamSendBtn">Enviar</button>
+        </div>
+
     </div>
-
-    <!-- DESCRIPCIÓN -->
-    <div class="biokuam-chat-description">
-        Este chat usa IA para ayudarte con dudas sobre tus cultivos usando los datos del sistema:
-        pH, humedad, temperatura y recomendaciones para riego o corrección del agua.
-    </div>
-
-    <!-- CHAT -->
-    <div id="biokuamChatBox" class="biokuam-chat-box"></div>
-
-    <!-- INPUT -->
-    <div class="biokuam-input-area">
-        <textarea id="biokuamUserInput" placeholder="Escribe tu pregunta aquí..."></textarea>
-        <button id="biokuamSendBtn">Enviar</button>
-    </div>
-
-</div>
 
 
     </section>

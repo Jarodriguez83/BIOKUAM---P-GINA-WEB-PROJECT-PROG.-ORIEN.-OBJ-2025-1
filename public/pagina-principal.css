@@ -526,7 +526,14 @@ nav a:hover {
 
 
 
-  .biokuam-chat-container {
+ /* Configuración de la fuente global con Tailwind */
+        :root {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* CSS DEL ASISTENTE CON GEMINI - BIOKUAM AI */
+
+        .biokuam-chat-container {
             width: 450px;
             height: 90vh;
             background: #ffffff;
@@ -535,7 +542,9 @@ nav a:hover {
             display: flex;
             flex-direction: column;
             box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-            font-family: "Poppins", sans-serif;
+            font-family: 'Inter', sans-serif; /* Usando Inter para consistencia */
+            margin: auto; /* Centrar el contenedor */
+            max-width: 95%; /* Adaptación móvil */
         }
 
         .biokuam-chat-header {
@@ -562,6 +571,7 @@ nav a:hover {
             padding: 15px;
             text-align: center;
             font-size: 14px;
+            font-weight: 500;
         }
 
         .biokuam-chat-box {
@@ -582,6 +592,7 @@ nav a:hover {
             border-radius: 12px 12px 0 12px;
             max-width: 70%;
             font-size: 15px;
+            word-wrap: break-word;
         }
 
         .biokuam-msg-ai {
@@ -593,6 +604,19 @@ nav a:hover {
             max-width: 70%;
             font-size: 15px;
             border-left: 4px solid #002244;
+            word-wrap: break-word;
+        }
+        
+        /* Estilo para el mensaje de "escribiendo..." */
+        .typing-indicator {
+            align-self: flex-start;
+            background: #eaeaea;
+            padding: 12px;
+            border-radius: 12px 12px 12px 0;
+            max-width: 70%;
+            font-size: 15px;
+            border-left: 4px solid #002244;
+            opacity: 0.7;
         }
 
         .biokuam-input-area {
@@ -632,4 +656,9 @@ nav a:hover {
 
         .biokuam-input-area button:hover {
             background: #ff8c00;
+        }
+        
+        .biokuam-input-area button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
         }
