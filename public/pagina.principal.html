@@ -7,40 +7,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- [CMCB] Configuración general de codificación y vista responsive -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
-  <!-- [JARR] Título de la pestaña y enlaces de estilos -->
   <title>PANEL PRINCIPAL - BIOKUAM</title>
   <link rel="stylesheet" href="pagina-principal.css"/>
   <link rel="shortcut icon" href="IMG/LOGO DEL BARCO BKM.png" type="image/x-icon">
   
-  <!-- [CMCB] Fuente Poppins desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   
-  <!-- [JARR] Fuentes adicionales para estilo personalizado -->
   <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Poetsen+One&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- 1. CSS de Leaflet: Define los estilos y apariencia del mapa. -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
     
-<!-- 2. JS de Leaflet: Contiene toda la lógica y funciones para crear el mapa. -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20n6a9Kx/waD9wtlS+4s53S6X7tOAS+x+Z+aXgT9YgI="
     crossorigin=""></script>
 
 
 
-  <!-- 1. CSS de Leaflet: Define los estilos y apariencia del mapa. -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
     
-<!-- 2. JS de Leaflet: Contiene toda la lógica y funciones para crear el mapa. -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20n6a9Kx/waD9wtlS+4s53S6X7tOAS+x+Z+aXgT9YgI="
     crossorigin=""></script>
@@ -49,10 +41,8 @@
 
 
 
-<!-- Incluyendo Tailwind CSS para estilos de contenedor -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- CRÍTICO: CSS de Leaflet (Sin atributos de integridad para evitar el bloqueo de seguridad) -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     
 </head>
@@ -85,8 +75,8 @@
     <!-- [JARR] Sección principal: Dashboard -->
     <section id="dashboard" class="dashboard-section active">
       <div class="welcome-banner">
-        <h1>¡Bienvenido al Sistema BIOKUAM!</h1>
-        <p>Monitoreo inteligente de calidad del agua para cultivos de maíz</p>
+        <h1>¡BIENVENIDO AL SISTEMA DE BIOKUAM!</h1>
+        <p style="font-family: 'Handlee', cursive;">MONITOREO INTELIGENTE DE CALIDAD DEL AGUA (PH, TEMPERATURA) PARA RIEGO DE CULTIVOS DE MAÍZ.</p>
       </div>
 <div class="map-container">
         
@@ -212,7 +202,7 @@
       <p id="viento"></p>
     </div>
     <script></script>
-          <!-- [JARR] Contenedor para visualización del ph en tiempo real -->
+          <!-- [JARR] Contenedor para visualización del ph y temperatura en tiempo real -->
       <div class="chart-container">
         <center><h3>VISUALIZACIÓN DEL PH EN TIEMPO REAL</h3></center>
           <p class="info_ph_tr"> DATOS DEL PH CAPTURADOS DESDE EL SENSOR PH 4502C - SIMIJACA, CUNDINAMARCA</p>
@@ -256,18 +246,15 @@
     <!-- ESTRUCTURA COMPLETA DEL CHAT -->
     <div class="biokuam-chat-container">
 
-        <!-- HEADER -->
         <div class="biokuam-chat-header">
             <h1 style="  font-family: 'Handlee', cursive">ASISTENTE BIOKUAM CON IA 'GEMINI'</h1>
             <h2>SIMIJACA, CUNDINAMARCA</h2>
         </div>
 
-        <!-- DESCRIPCIÓN -->
         <div class="biokuam-chat-description">
             ESTE CHAT USA EL APOYO DE IA PARA AYUDARTE CON LA SOLUCIÓN DE LAS DUDAS QUE TENGAS SOBRE TUS CULTIVOS. TE RECOMENDAMOS USAR LOS DATOS DE: PH Y TEMPERATURA, PARA QUE TE PUEDA AYUDAR DE UNA FORMA MÁS REAL.
         </div>
 
-        <!-- CHAT BOX -->
         <div id="biokuamChatBox" class="biokuam-chat-box">
             <!-- Mensaje inicial de bienvenida de la IA -->
             <div class="biokuam-msg-ai">
@@ -275,7 +262,6 @@
             </div>
         </div>
 
-        <!-- INPUT -->
         <div class="biokuam-input-area">
             <textarea id="biokuamUserInput" placeholder="Escribe tu pregunta aquí..."></textarea>
             <button id="biokuamSendBtn" style="font-family: 'Handlee', cursive;">ENVIAR</button>
