@@ -23,7 +23,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Poetsen+One&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
-
+  <!-- 1. CSS de Leaflet: Define los estilos y apariencia del mapa. -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
+<!-- 2. JS de Leaflet: Contiene toda la lógica y funciones para crear el mapa. -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20n6a9Kx/waD9wtlS+4s53S6X7tOAS+x+Z+aXgT9YgI="
+    crossorigin=""></script>
 
 
 
@@ -36,6 +44,17 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20n6a9Kx/waD9wtlS+4s53S6X7tOAS+x+Z+aXgT9YgI="
     crossorigin=""></script>
+
+
+
+
+
+<!-- Incluyendo Tailwind CSS para estilos de contenedor -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- CRÍTICO: CSS de Leaflet (Sin atributos de integridad para evitar el bloqueo de seguridad) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    
 </head>
 
 <body>
@@ -69,6 +88,14 @@
         <h1>¡Bienvenido al Sistema BIOKUAM!</h1>
         <p>Monitoreo inteligente de calidad del agua para cultivos de maíz</p>
       </div>
+<div class="map-container">
+        
+        <!-- Contenedor donde Leaflet inyectará el mapa -->
+        <div id="biokuamMap"></div>
+    </div>
+
+    <!-- CRÍTICO: JS de Leaflet (Sin atributos de integridad para evitar el bloqueo) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
       <!-- [CMCB] Tarjetas con estadísticas principales -->
       <div class="stats-grid">
@@ -191,7 +218,6 @@
           <p class="info_ph_tr"> DATOS DEL PH CAPTURADOS DESDE EL SENSOR PH 4502C - SIMIJACA, CUNDINAMARCA</p>
         <div class="chart-placeholder">
           <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/3151266/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"></iframe>
-          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/3151266/maps/channel_show"></iframe>
           <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2755422/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
 
         

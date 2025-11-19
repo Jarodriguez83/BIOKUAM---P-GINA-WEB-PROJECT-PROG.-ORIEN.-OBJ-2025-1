@@ -664,3 +664,26 @@ nav a:hover {
             background: #ccc;
             cursor: not-allowed;
         }
+
+
+
+
+
+        
+ /* ------------------------------------------- */
+        /* ESTILOS CRÍTICOS DEL MAPA */
+        /* ------------------------------------------- */
+        #biokuamMap {
+            /* CRÍTICO: Debe tener una altura definida para que Leaflet dibuje dentro */
+            height: 95vh; 
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
+            margin: 20px auto;
+        }
+
+        .map-container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 1rem;
+        }
